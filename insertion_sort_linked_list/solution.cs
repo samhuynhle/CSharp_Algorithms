@@ -13,18 +13,23 @@ public class LinkedListIS
             this.val = val;
         }
     }
+    // Push node into the front of the linked list
     void push(int val)
     {
         node newnode = new node(val);
         newnode.next = head;
         head = newnode;
     }
+    // method to sort current linked list
     void insertionSort(node headref)
     {
+        // initialize another list to sort given list
         sorted = null;
         node current = headref;
+        // traverse through the given linked list
         while(current != node)
         {
+            // store so we can increment through the given linked list
             node next = current.next;
             sortedInsert(current);
             current = next;
@@ -32,6 +37,7 @@ public class LinkedListIS
         head = sorted;
     }
 
+    // method to insert the nodes from the given linked list into the sorted linked list
     void sortedInsert(node newnode)
     {
         if(sorted == null || sorted.val >= newnode.val)
