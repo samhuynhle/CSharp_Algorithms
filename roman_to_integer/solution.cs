@@ -14,7 +14,7 @@ public class Solution {
         int ret = 0;
         for(int i = s.Length - 1; i >= 0; i--) {
             if (i < (s.Length - 1) && romans[s[i]] < romans[s[i + 1]]){
-                ret -= map[s[i]];
+                ret -= romans[s[i]];
             } else {
                 ret += romans[s[i]];
             }
