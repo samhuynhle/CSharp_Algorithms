@@ -22,14 +22,17 @@ public class Solution{
 
                 // if needleIndex is equal to the length of needle, we return the position we are at within haystack
                 if(needleIndex == needle.Length){
+                    // return index in haystack
                     return i - needleIndex + 1;
                 }
-                // if we don't have a match, we move back to the last match and reset needle index
+            // if we don't have a match, we move back in the haystack
+            // to check for a mtach starting from the next character
             } else {
                 i -= needleIndex;
                 needleIndex = 0;
             }
         }
+        // if we make it through without matches, return -1
         return -1;
     }
 }
