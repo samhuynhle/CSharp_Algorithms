@@ -15,6 +15,7 @@ public class Solution{
         int needleIndex = 0;
 
         // looping through, we have our second pointer
+        // we are expecting to return a the index the needle starts at, food and ood, ood starts at 1
         for(int i = 0; i < haystack.Length; i++){
             // if the char at the current position is equal to the needle at needleIndex, then we increment needleIndex
             if(haystack[i] == needle[needleIndex]){
@@ -32,7 +33,7 @@ public class Solution{
                 needleIndex = 0;
             }
         }
-        // if we make it through without matches, return -1
+        // if we make it through without matches, return -1, 'false'
         return -1;
     }
 }
