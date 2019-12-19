@@ -1,11 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public int val;
- *     public ListNode next;
- *     public ListNode(int x) { val = x; }
- * }
- */
+/*
+Definition for singly-linked list.
+public class ListNode {
+    public int val;
+    public ListNode next;
+    public ListNode(int x) { val = x; }
+}
+*/
 public class Solution {
     public ListNode AddTwoNumbers(ListNode l1, ListNode l2) { // takes two linked lists, which store reverse order numbers: 847 is represented as 7 -> 4 -> 8
         ListNode dummy = new ListNode(0); // we need to initialize a dummy node so we know where the start of our list is (will be dummy.next)
@@ -19,6 +19,7 @@ public class Solution {
             current = current.next; // move our marker
 
             // we move within the linked lists if they we valid, if they were null we leave it as null
+            // We are using ternary arguement to either assigning to .next or keeping l1/l2 as is
             l1 = ((l1 != null) ? l1.next : l1);
             l2 = ((l2 != null) ? l2.next : l2);
         }
