@@ -1,3 +1,5 @@
+// We are using a stack to help analyze the string and to check on the conditionals of a valid parentheses.
+
 public class Solution {
     public bool IsValid(string s) {
         Stack<char> stack = new Stack<char>();
