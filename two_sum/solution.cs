@@ -1,3 +1,5 @@
+// two sum algorithm finds two integers that sum up to the target value. We are using dictionary to store information as we loop; keys are the pairs and values are the index.
+
 public class Solution {
     public int[] TwoSum(int[] nums, int target) {
         Dictionary <int, int> hashmap = new Dictionary<int, int>();
